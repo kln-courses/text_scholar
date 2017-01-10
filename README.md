@@ -1,7 +1,7 @@
 ```yaml
 title: Korpus and Tekstanalyse
-place: Nobelparken, build. 1453, room 415, Jens Chr. Skous Vej.
-time: February 9, 2017.
+place: Nobelparken, bygning 1453, lokale 415, Jens Chr. Skous Vej.
+time: Februar 9, 2017.
 instructor: Kristoffer L. Nielbo  (KLN)
 contact: kln@cas.au.dk
 ```
