@@ -7,11 +7,11 @@ contact: kln@cas.au.dk
 ```
 ## Modul 5: Digital Humaniora og Humanistiske Data ##
 **kl. 9.00-10.30**  
-Digital Humaniora (DH) omhandler *computing* og digitalisering indenfor de humanistiske domæner. To markante trends indenfor DH er *Computational Humanities* og DH 2.0, som har fokuseret på at hhv. at anvende eller analysere *computing* og digitalisering. På baggrund af datavidenskabens success, har man på det seneste set en tredje trend, *humanities data*, som arbejder med af forbinde humanistiske domænekompetencer indenfor sprog og kultur med såkaldte dataintensive metoder (f.eks., metoder tilpasset store tekstsamlinger). Dette modul introducerer DH med særligt fokus på tekstanalyse baseret på *humanities data*.    
+Digital Humaniora (DH) omhandler *computing* og digitalisering indenfor de humanistiske domæner. To markante trends indenfor DH er *Computational Humanities* og DH 2.0, som har fokuseret på at hhv. at anvende eller at analysere *computing* og digitalisering. På baggrund af datavidenskabens success, har man på det seneste set en tredje trend, *humanities data*, som arbejder med af forbinde humanistiske domænekompetencer indenfor sprog og kultur med såkaldte dataintensive metoder (fx., metoder tilpasset store tekstsamlinger). Dette modul introducerer DH med særligt fokus på tekstanalyse baseret på *humanities data*.    
 
 ## Workshop 3: Automatiseret Tekst Analyse ##
 **kl. 10.50-14.30**   
-Automatiseret tekstanalyse dækker over teknikker til at finde mønstre i ustrukturerede og teksttunge data. Teknikker baseret på statistisk læring (el. maskinlæring) giver en række muligheder for at træne modeller, der kan annotere, opsummere og udforske store tekstsamlinger. I denne workshop gennemgåes eksempler på hvordan simple scripting sprog kan implementere sådanne teknikker.
+Automatiseret tekstanalyse dækker over teknikker til at finde mønstre i ustrukturerede og teksttunge data. Teknikker baseret på statistisk læring (el. maskinlæring) giver en række muligheder for at træne modeller, der kan annotere, opsummere og udforske store tekstsamlinger. I denne workshop gennemgås eksempler på hvordan simple scripting sprog kan implementere sådanne teknikker.
 
 ## Anbefalet læsning ##
 *sentiment analysis*  
