@@ -24,4 +24,4 @@ Superviseret maskinlæring
 [Underwood, T. (2016). The Life Cycles of Genres. Journal of Culture Analytics.](http://culturalanalytics.org/2016/05/the-life-cycles-of-genres/)  
 
 ## Anbefalet software ##  
-Deltagere vil have fordel at at installere enten [R](https://www.r-project.org/ "The R Project for Statistical Computing") eller [Python](https://www.python.org/download/releases/2.7.2/ "Python 2.7.2"), men det er ikke obligatorisk.
+Deltagere vil have fordel at at installere enten [R](https://www.r-project.org/ "The R Project for Statistical Computing") eller [Python](https://www.python.org/downloads/), men det er ikke obligatorisk.
