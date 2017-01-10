@@ -4,6 +4,7 @@ place: Nobelparken, bygning 1453, lokale 415, Jens Chr. Skous Vej.
 time: Februar 9, 2017.
 instructor: Kristoffer L. Nielbo  (KLN)
 contact: kln@cas.au.dk
+link: https://github.com/kln-courses/text_scholar
 ```
 ## Modul 5: Digital Humaniora og Humanistiske Data ##
 **kl. 9.00-10.30**  
