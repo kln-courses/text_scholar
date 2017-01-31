@@ -1,9 +1,7 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-
-
-
-"""
+"""import xml tutorial"""
+__author__      = "K.L. Nielbo"
 # a look at a hierarchical data format
 import io
 filename = '/home/kln/Documents/education/text_scholar/data/1807_65.xml'
@@ -71,6 +69,3 @@ ii = 0
 print titles[ii]
 for ligne in docs[ii]: print ligne
 print docs_str[ii]
-
-
-
