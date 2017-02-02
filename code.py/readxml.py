@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""import xml tutorial"""
+""" tutorial: import xml from folder """
 __author__      = "K.L. Nielbo"
 # a look at a hierarchical data format
 import io
-filename = '/home/kln/Documents/education/text_scholar/data/1807_65.xml'
+filename = '/home/kln/Documents/education/text_scholar/data/xml/1807_65.xml'
 with io.open(filename,'r',encoding = 'utf8') as f:
     xmlplain = f.read() 
 f.closed
@@ -14,7 +14,7 @@ print 'the tm gods prefer plain text'.upper()
 # read lines in xml document from folder on filepath 
 import os
 from lxml import html
-filepath = "/home/kln/Documents/education/text_scholar/data/"
+filepath = "/home/kln/Documents/education/text_scholar/data/xml/"
 files = os.listdir(filepath)
 os.chdir(filepath)
 
@@ -63,7 +63,7 @@ def xml_folder(filepath):
     return docs, titles, docs_str
 
 # test 2
-docs, titles, docs_str = xml_folder("/home/kln/Documents/education/text_scholar/data/")
+docs, titles, docs_str = xml_folder("/home/kln/Documents/education/text_scholar/data/xml/")
 
 ii = 0
 print titles[ii]
