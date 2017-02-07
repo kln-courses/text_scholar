@@ -1,0 +1,14 @@
+a \textcolor{purple}{dictionary} can identify keywords in a collection of documents and apply a sentiment function\\
+\medskip
+\begin{Verbatim}
+'Did \textcolor{red}{Crooked} \textcolor{red}{Hillary} help \textcolor{red}{disgusting} (check \textcolor{red}{out} \textcolor{green}{sex} tape and past) Alicia M become a U.S. \textcolor{green}{citizen}
+so she could use her in the debate?'
+
+\textbf{Positive} sex, citizen
+\textbf{Negative} crooked, hillary, disgusting, out
+\textbf{Sentiment Score} (2+1) + (-2-1-3-1) = -4
+\textbf{Sentiment Polarity} Negative
+\textbf{Overall Score} Sum of all sentence scores
+\end{Verbatim}
+\medskip
+a sentiment vector is simply a vector of keyword frequencies weighted by sentiment scores\\

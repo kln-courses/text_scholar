@@ -47,7 +47,7 @@ def xml_folder(filepath):
 # TODO
 def norm_unicode(docs):
     normdocs = []
-    regex = re.compile("['()\*\-,\.!?<>0-9]")
+    regex = re.compile("['()\*\-,\.\:!?<>0-9]")
     for doc in docs:
         doc = unidecode(doc).lower()
         doc = regex.sub('',doc)

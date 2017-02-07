@@ -1,0 +1,330 @@
+\documentclass[8pt]{beamer}
+\usetheme{Pittsburgh}
+	\usecolortheme{dove}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+% for R code in box and w. text coloring
+\usepackage{color}
+\usepackage{fancyvrb}
+\fvset{frame=single,framesep=1mm,fontfamily=courier,fontsize=\scriptsize,numbers=left,framerule=.3mm,numbersep=1mm,commandchars=\\\{\}}
+
+%% code in box and w. text coloring
+\RequirePackage{color}
+\RequirePackage{fancyvrb}
+\fvset{frame=single,framesep=1mm,fontfamily=courier,fontsize=\scriptsize,numbers=left,framerule=.3mm,numbersep=1mm,commandchars=\\\{\}}
+
+% footnote size
+\let\oldfootnotesize\footnotesize
+\renewcommand*{\footnotesize}{\oldfootnotesize\tiny}
+
+% metadata
+\author{K.L. Nielbo}
+%\title{}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+%\logo{\includegraphics[scale=.1]{/home/kln/Pictures/imc_logo.png}} 
+
+% logo control
+\newcommand{\nologo}{\setbeamertemplate{logo}{}} 
+\logo{%
+  \makebox[.98\paperwidth]{%
+    \includegraphics[scale=.07]{/home/kln/Pictures/aulogo.jpg}%
+    \hfill%
+    \includegraphics[scale=.125]{/home/kln/Pictures/imclogo.png}%
+  }%
+}
+
+\title{Digital Humanities \& Humanities Data}
+\subtitle{}
+\author{Kristoffer L Nielbo \\\texttt{kln@cas.au.dk}}
+\date{}
+\institute{DAI$\mid$IMC$\mid$AARHUS UNIVERSITY}
+
+\begin{document}
+
+%%%%% introduction
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\textbf{does is make sense to talk about a unified DH anymore?}
+	\end{center}
+\end{frame}
+
+\begin{frame}{}
+\textbf{DIGITAL HUMANITIES$\mid$DH}\\
+\noindent\rule{1cm}{0.4pt}\\
+-- the \textit{\textcolor{purple}{conjunction}} of the digital and the humanities\\
+-- \textcolor{purple}{redrawing boundary} lines traditional academic boundaries\\
+-- expanding the audience and \textcolor{purple}{social impact of scholarship} in the humanities\\
+-- developing \textcolor{purple}{new forms of inquiry} and knowledge production\\
+-- training \textcolor{purple}{future generations} of humanists through hands-on, project-based learning\\
+-- increase \textcolor{purple}{visibility} of humanistic inquiry\\
+\medskip
+\textit{DH has gone through several distinct transformations during the last 3 decades}\\
+\noindent\rule{2cm}{0.4pt}\\
+\textbf{HUMANITIES COMPUTING} -- computational tools in traditional humanities\\
+\textbf{DIGITAL HUMANTIES 2.0} -- digital culture, activism and critique\\
+\textbf{HUMANITIES DATA} -- data-intensive research in SSH domains\\
+\noindent\rule{4cm}{0.4pt}\\
+\end{frame}
+
+
+%%%%% what happend
+
+\begin{frame}{}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+	\begin{center}
+		\includegraphics[scale=.25]{/home/kln/Pictures/technologies_10_nologo.jpg}     	
+     \end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+    \begin{center}
+     	\includegraphics[scale=.325]{/home/kln/Pictures/data_explosion.png}
+    \end{center}
+\end{column}
+\end{columns}
+\bigskip 
+\bigskip
+\small
+\begin{quote}
+`Digitization and digital media have generated a rapid proliferation of data that is unprecedented in the history of man. This \textcolor{purple}{\textbf{digital surge}} is transforming knowledge discovery and understanding in every domain of human inquiry. Digital research, computing, data management, and data-intensive methods will therefore become integral parts of internationally-leading research in the humanities and arts.'
+\end{quote}
+\begin{flushright}
+(Digital Arts Strategy 2016)
+\end{flushright}
+\end{frame}
+
+%%%%% example
+\begin{frame}%{eHumanities forskningseksempel}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Pictures/ts_example.png}
+	\end{center}
+	\small \textbf{humanities data example}
+	 -- humanistic domain knowledge (history og medie studies), data engineering, programming, statistics \& visualisation\\
+\end{frame}
+
+%%%%% more than one word on data
+\begin{frame}
+	\begin{center}
+		\textbf{what is so new about DATA (or we always had data)?}
+	\end{center}
+\end{frame}
+
+\begin{frame}{}%data $\neq$ knowledge}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Pictures/data_knowledge.png}
+	\end{center}
+\end{frame}
+\begin{frame}{}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Pictures/data_knowledge_data.png}
+	\end{center}
+\end{frame}
+\begin{frame}{}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Pictures/data_knowledge_info.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\begin{center}
+		\textbf{DATA modifies our workflow?}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Documents/education/tm_R/classes/intro_p4/f1.PNG}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Documents/education/tm_R/classes/intro_p4/f2.PNG}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Documents/education/tm_R/classes/intro_p4/f3.PNG}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Documents/education/tm_R/classes/intro_p4/f4.PNG}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\begin{center}
+		\includegraphics[scale=.3]{/home/kln/Documents/education/tm_R/classes/intro_p4/f5.PNG}
+	\end{center}
+\end{frame}
+
+%%%%% 3 techniques
+\begin{frame}
+	\begin{center}
+		\textbf{examples of data-intensive methods in DH}
+	\end{center}
+\end{frame}
+
+%%% sentiment analysis
+\begin{frame}
+\textbf{PROBLEM \#1}\\
+\noindent\rule{1cm}{0.4pt}\\
+a document is an ordered set of words that (at least in part) expresses the \textcolor{purple}{cognitive and affective states} of the author\\
+\medskip
+we want a \textcolor{purple}{automatized method} that transfers psychological scales to documents and maintain validity and reliablility\\
+\medskip 
+preferably, the method should be \textcolor{purple}{scalable} both in terms of quantity and context\\
+\end{frame}
+
+\begin{frame}[fragile]
+a \textcolor{purple}{dictionary} can identify keywords in a collection of documents and apply a sentiment function\\
+\medskip
+\begin{Verbatim}
+'Did \textcolor{red}{Crooked} \textcolor{red}{Hillary} help \textcolor{red}{disgusting} (check \textcolor{red}{out} \textcolor{green}{sex} tape and past) Alicia M become a U.S. \textcolor{green}{citizen} 
+so she could use her in the debate?'
+ 
+\textbf{Positive} sex, citizen
+\textbf{Negative} crooked, hillary, disgusting, out
+\textbf{Sentiment Score} (2+1) + (-2-1-3-1) = -4 
+\textbf{Sentiment Polarity} Negative
+\textbf{Overall Score} Sum of all sentence scores
+\end{Verbatim}
+\medskip
+a sentiment vector is simply a vector of keyword frequencies weighted by sentiment scores\\
+\end{frame}
+
+\begin{frame}
+\textbf{sentiment analysis} a set of methods for extracting the (primarily) affective components from unstructured data\\ 
+\medskip
+utilize existing dictionaries to avoid tedious manual coding and validation*\\ 
+\medskip
+three general approaches:\\
+\begin{itemize}
+\item[-] \textcolor{purple}{dictionary-based methods} (word counting)
+\item[-] supervised learning (ML)
+\item[-] unsupervised learning (ML)
+\end{itemize}
+\end{frame}
+
+
+%%% topic modeling
+
+\begin{frame}
+\textbf{PROBLEM \#2}\\
+a document is a structured* or \textcolor{purple}{non-random collection of words}, but who or what is the structuring agent?\\
+\medskip
+to \textcolor{purple}{avoid manual modeling}, we want method that we can throw ++documents at and then it will sort things out\\
+\medskip
+preferably, the output should exhibit some degree of similarity with human text comprehension\\
+\end{frame}
+
+
+\begin{frame}
+\medskip
+we can extract latent topics that generated the documents by reverse engineering the process  $words~ \&~doc \Rightarrow topics$\\
+\medskip
+decompose an n-by-d word document matrix into two matrices: a n-by-k \textcolor{red}{word topic matrix} and an k-by-d  \textcolor{green}{topic document matrix}\\
+	\begin{center}
+		\includegraphics[scale=1.5]{/home/kln/Pictures/matrixfact.png}
+	\end{center}
+\medskip
+to ``generate'' a document, choose a distribution over topics, sample a topic (k-by-d matrix), then a word from this topic (n-by-k matrix) and repeat
+\end{frame}
+
+\begin{frame}{}
+	\begin{columns}
+		\begin{column}{.35\textwidth}
+			\includegraphics[width=1\textwidth]{/home/kln/Pictures/doc_dist.png}
+			
+			\includegraphics[width=1\textwidth]{/home/kln/Pictures/topic.png}
+		\end{column}
+		\begin{column}{.55\textwidth}			 
+			\includegraphics[width = 1\textwidth]{/home/kln/Pictures/document.png}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+
+% word embedding
+\begin{frame}
+\textbf{PROBLEM \#3}\\
+word meaning is \textcolor{purple}{dependent on word context} and words in similar contexts have similar meanings\\  
+\medskip
+to increase computational efficiency and obtain distributed representations for words, we want a methods that can learn every association from a large set of documents without human interference\\ 
+\medskip
+preferably, the method should \textcolor{purple}{emulate human concept learning}\\
+\end{frame}
+
+
+
+\begin{frame}%{Word embedding - the new black}
+we can train an \textcolor{purple}{Artificial Neural Network} to predict a word given its context (CBOW) or predict a context given a word (Skip-gram)\\
+\medskip
+\begin{center}
+	\includegraphics[scale=.25]{/home/kln/Pictures/word_embed_arch.png}
+\end{center}
+the word representations (word vectors) used by the ANN to solve the task will \textcolor{purple}{reflect important semantic features} 
+\end{frame}
+
+
+%%%%% a word on tools
+\begin{frame}
+	\begin{center}
+		\textbf{available tools}
+	\end{center}
+\end{frame}
+
+\begin{frame}{}
+\begin{center}
+\includegraphics[scale=.75]{/home/kln/Pictures/bigDataEcoSys.png} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   \begin{center}
+		\includegraphics[width=1.2\textwidth]{/home/kln/Pictures/pythonLogo.png}   
+   \end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+    \begin{center}
+		\includegraphics[width=0.5\textwidth]{/home/kln/Pictures/Rlogo.png}    
+    \end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   \begin{center}
+    \includegraphics[width=1\textwidth]{/home/kln/Pictures/rapidminer.png}\\
+    \bigskip
+    \includegraphics[width=1\textwidth]{/home/kln/Pictures/tableau.png}
+    \end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+    \begin{center}
+    \includegraphics[width=.5\textwidth]{/home/kln/Pictures/antconc.jpg}\\
+    \bigskip
+    \includegraphics[width=.8\textwidth]{/home/kln/Pictures/voyant.png}
+    \end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

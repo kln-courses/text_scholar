@@ -1,5 +1,5 @@
 ```yaml
-title: Korpus and Tekstanalyse
+title: Digital Humaniora og Humanistiske Data (Workshop: Automatiseret Tekst Analyse)
 place: Nobelparken, bygning 1453, lokale 415, Jens Chr. Skous Vej.
 time: Februar 9, 2017.
 instructor: Kristoffer L. Nielbo  (KLN)
@@ -12,7 +12,13 @@ Digital Humaniora (DH) omhandler *computing* og digitalisering indenfor de human
 
 ## Workshop 3: Automatiseret Tekstanalyse ##
 **kl. 10.50-14.30**   
-Automatiseret tekstanalyse dækker over teknikker til at finde mønstre i ustrukturerede og teksttunge data. Teknikker baseret på statistisk læring (el. maskinlæring) giver en række muligheder for at træne modeller, der kan  annotere, opsummere og udforske store tekstsamlinger. I denne workshop gennemgås eksempler på hvordan simple scripting sprog kan implementere sådanne teknikker.
+Automatiseret tekstanalyse dækker over teknikker til at finde mønstre i ustrukturerede og teksttunge data. Teknikker baseret på statistisk læring (el. maskinlæring) giver en række muligheder for at træne modeller, der kan  annotere, opsummere og udforske store tekstsamlinger. I denne workshop gennemgås eksempler på hvordan simple scripting sprog kan implementere sådanne teknikker.  
+
+### Fil-import, datarensning og ordoptælling ###  
+**kl. 10.50-12.30**  
+
+### Semantiske associationer og temaer ###
+**kl. 13.30-14.30**
 
 ## Anbefalet læsning ##
 *sentiment analysis*  

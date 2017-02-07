@@ -1,0 +1,82 @@
+filename,collection,class,status
+Chronicles 1,old,historical,canon
+Corinthians 1,new,pauline,canon
+Esdras 1,old,prophecy,deuterocanon
+John 1,new,non pauline,canon
+Kings 1,old,historical,canon
+Maccabees 1,old,NA,deuterocanon
+Peter 1,new,non pauline,canon
+Samuel 1,old,historical,canon
+Thessalonians 1,new,pauline,canon
+Timothy 1,new,pauline,canon
+Chronicles 2,old,historical,canon
+Corinthians 2,new,pauline,canon
+Esdras 2,old,NA,deuterocanon
+John 2,new,non pauline,canon
+Kings 2,old,historical,canon
+Maccabees 2,old,NA,deuterocanon
+Peter 2,new,non pauline,canon
+Samuel 2,old,historical,canon
+Thessalonians 2,new,pauline,canon
+Timothy 2,new,pauline,canon
+John 3,new,non pauline,canon
+Acts,new,historical,canon
+Amos,old,prophecy,canon
+Azariah,old,NA,deuterocanon
+Baruch,old,NA,deuterocanon
+Bel,old,NA,deuterocanon
+Colossians,new,pauline,canon
+Daniel,old,prophecy,canon
+deuteronomy,old,pentateuch,canon
+Ecclesiastes,old,poet-wisdom,canon
+Ephesians,new,pauline,canon
+Esther,old,historical,canon
+Exodus,old,pentateuch,canon
+Ezekiel,old,prophecy,canon
+Ezra,old,historical,canon
+Galathians,new,pauline,canon
+genesis,old,pentateuch,canon
+Esther,old,history,canon
+Habakkuk,old,prophecy,canon
+Haggai,old,prophecy,canon
+Hebrews,new,non pauline,canon
+Hosea,old,prophecy,canon
+Isaiah,old,prophecy,canon
+James,new,non pauline,canon
+Jeremiah,old,prophecy,canon
+Job,old,poet-wisdom,canon
+Joel,old,prophecy,canon
+John,new,historical,canon
+Jonah,old,prophecy,canon
+Joshua,old,historical,canon
+Jude,new,non pauline,canon
+Judges,old,historical,canon
+Judith,old,NA,deuterocanon
+Lamentations,old,prophecy,canon
+Letter of Jeremiah,old,NA,deuterocanon
+Leviticus,old,pentateuch,canon
+Luke,new,historical,canon
+Malachi,old,prophecy,canon
+Manasseh,old,NA,deuterocanon
+Mark,new,historical,canon
+Matthew,new,historical,canon
+Micah,old,prophecy,canon
+Nahum,old,prophecy,canon
+Nehemiah,old,historical,canon
+Numbers,old,pentateuch,canon
+Obadiah,old,prophecy,canon
+Philemon,new,pauline,canon
+Philippians,new,pauline,canon
+Proverbs,old,poet-wisdom,canon
+Psalms,old,poet-wisdom,canon
+Revelation,new,non pauline,canon
+Romans,new,pauline,canon
+Ruth,old,historical,canon
+Sirach,old,NA,deuterocanon
+Son of Solomon,old,poet-wisdom,canon
+Susanna,old,NA,deuterocanon
+Titus,new,pauline,canon
+Tobit,old,NA,deuterocanon
+Wisdom,old,NA,deuterocanon
+Zechariah,old,prophecy,canon
+Zephaniah,old,prophecy,canon

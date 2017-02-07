@@ -29,9 +29,6 @@ def prune_token(unigrams,mxper = 95,mnper = 0):
 
 texts = prune_token(texts,99)
 
-print titles[0]
-print texts[0]
-
 #from gensim.utils import chunkize
 #def chunk_token(unigrams,n):
 #    chunks = []
@@ -44,9 +41,16 @@ print texts[0]
 
 ## train LDA model
 from gensim import corpora, models
-# bag-of-words
+## bag-of-words model
 dictionary = corpora.Dictionary(texts)
 corpus = [dictionary.doc2bow(chunk) for chunk in texts]
+
+# inspect bag of words representation of document
+i = 200
+adoc = corpus[i]
+for ii in range(len(adoc)):
+    print dictionary[adoc[ii][0]] + ', ' + str(adoc[ii][0]) + ':' + str(adoc[ii][1])
+
 # for reproducibility
 fixed_seed = 1234
 # import numpy as np
@@ -55,7 +59,9 @@ np.random.seed(fixed_seed)
 k = 20
 mdl = models.LdaModel(corpus, id2word=dictionary, num_topics=k, chunksize=3125, passes=25, update_every=0, alpha=None, eta=None, decay=0.5, distributed=False)
 # print topics
-for i in range(0,k):
+for i in range(k):
     print 'Topic', i+1
-    print(mdl.show_topic(i,15))
+    print(mdl.show_topic(i,10))
     print('-----')
+
+
