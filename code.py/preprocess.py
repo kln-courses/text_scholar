@@ -28,7 +28,8 @@ def norm_unicode(docs):
     normdocs = []
     regex = re.compile("['()\*\-,\.!?<>0-9]")
     for doc in docs:
-        doc = unidecode(doc).lower()
+        doc = doc.lower()
+        #doc = unidecode(doc)
         doc = regex.sub('',doc)
         normdocs.append(doc)
     return normdocs
@@ -51,6 +52,24 @@ def tokenize_list(docs):
 docstoken = tokenize_list(docsnorm)
 print docstoken[0]
 
+## remove stopwords from external list
+from nltk.corpus import stopwords
+sw = stopwords.words("danish")
+token = [word for word in token if word not in sw] 
+len(token)
+
+from nltk.corpus import stopwords
+def stopfilter_list(docstoken, lang = "english"):
+    sw = stopwords.words(lang)   
+    # sw = io.open("/home/kln/Documents/education/text_scholar/resources/stopwords_da.txt",'r',encoding = 'utf8').read().lower().split() 
+    output = []
+    for tokens in docstoken:
+        output.append([token for token in tokens if token not in sw])
+    return output
+
+docstoken = stopfilter_list(docstoken, 'danish')
+
+
 # stemming
 from nltk.stem.snowball import SnowballStemmer
 stemmer = SnowballStemmer("danish", ignore_stopwords = True)
@@ -63,7 +82,7 @@ def stem_list(docstoken):
 docsstem = stem_list(docstoken) 
 print docsstem[0]
 
-# working with dataframes dor metadata
+# working with dataframes for metadata
 import pandas as pd
 import numpy as np
 filepath = "/home/kln/Documents/education/text_scholar/data/adl_index.txt"

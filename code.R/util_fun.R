@@ -46,10 +46,11 @@ rowVars <- function(x) {
   rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1)
 }
 
-# prune dtm
-prune <- function(dtm,mx,p){
-  mx <- ceiling(dim(dtm)[1]*mx)
-  dtm <- dtm[,slam::col_sums(as.matrix(dtm) > 0) < mx]
-  dtm <- dtm[,col_sums(dtm) < quantile(slam::col_sums(dtm),p)]
+# prune dtm on percentile
+prune <- function(dtm, mxper, mnper = 0){
+  freq <- slam::col_sums(as.matrix(dtm))
+  per <- quantile(freq, c(mnper,mxper))
+  idx <- (freq >= per[1]) & (freq <= per[2])
+  dtm = dtm[,idx]
   return(dtm)
 }

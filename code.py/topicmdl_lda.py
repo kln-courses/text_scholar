@@ -6,28 +6,19 @@ __author__      = "K.L. Nielbo"
 import os
 os.chdir("/home/kln/Documents/education/text_scholar/code.py")
 import textscholar as ts
+import numpy as np
+from pandas import read_table
 
+## import texts
 somedir = "/home/kln/Documents/education/text_scholar/data/txt/"
-
+adl_metadata = read_table("/home/kln/Documents/education/text_scholar/data/adl_index.txt", header = None, encoding = 'utf-8')
 texts, titles = ts.vanilla_folder(somedir)
 texts = ts.norm_unicode(texts)
 texts = ts.tokenize_list(texts)
+texts = ts.stopfilter_list(texts, lang = "danish")
+texts = ts.prune_n(texts,100)
+
 #texts = ts.stem_list(texts)
-
-from collections import defaultdict
-import numpy as np
-def prune_token(unigrams,mxper = 95,mnper = 0):
-    frequency = defaultdict(int)
-    for doc in unigrams:
-        for unigram in doc:
-            frequency[unigram] += 1
-    freqs = [val for val in frequency.values()]
-    mx = np.percentile(freqs, mxper)
-    mn = np.percentile(freqs, mnper)
-    unigrams_prune = [[unigram for unigram in doc if (frequency[unigram] > mn and frequency[unigram] <= mx)] for doc in unigrams]
-    return unigrams_prune
-
-texts = prune_token(texts,99)
 
 #from gensim.utils import chunkize
 #def chunk_token(unigrams,n):
@@ -47,21 +38,39 @@ corpus = [dictionary.doc2bow(chunk) for chunk in texts]
 
 # inspect bag of words representation of document
 i = 200
+print ts.get_metadata(adl_metadata, titles, i)
+print titles[i]
+print texts[i]
+len(texts[i])
 adoc = corpus[i]
 for ii in range(len(adoc)):
     print dictionary[adoc[ii][0]] + ', ' + str(adoc[ii][0]) + ':' + str(adoc[ii][1])
 
-# for reproducibility
-fixed_seed = 1234
-# import numpy as np
-np.random.seed(fixed_seed)
-# train model on k topics
-k = 20
+##  train model on k topics
+np.random.seed(23)
+k = 20 # for reproducibility
 mdl = models.LdaModel(corpus, id2word=dictionary, num_topics=k, chunksize=3125, passes=25, update_every=0, alpha=None, eta=None, decay=0.5, distributed=False)
-# print topics
-for i in range(k):
-    print 'Topic', i+1
+# export model
+# mdl.save('/home/kln/Documents/education/text_scholar/data/mdl.lda')
+import gensim
+mdl = gensim.models.LdaModel.load('/home/kln/Documents/education/text_scholar/data/mdl.lda')
+
+# inspect topics
+for i in range(20):
+    print 'Topic', i
     print(mdl.show_topic(i,10))
     print('-----')
+# get topic distribution for a documents    
+mdl.get_document_topics(adoc, minimum_probability=0)
+# or simply the most likely topics
+print mdl[adoc]
 
-
+# query model on particular set of words
+query = 'Jesus og Odin er venner'
+query = u'Ifølge Peter Madsen er Jesus og Odin venner'
+query = query.lower().split()
+vocab = dictionary.values()
+query = [w for w in query if w in vocab]
+query = dictionary.doc2bow(query)
+mdl[query]
+print mdl.show_topic(17,10)
