@@ -41,13 +41,12 @@ linestoken = [l for l in linestoken if l != []]
 import gensim
 mdl = gensim.models.Word2Vec(linestoken, min_count=5,size=100)
 # look at results
-print mdl.most_similar('guds')
 print mdl.most_similar('gud')
+print mdl.most_similar('guds')
 
 mdl.most_similar(positive=['kvinde', 'konge'], negative=['mand'])
 mdl.doesnt_match("gud jesus odin christ".split())
 mdl.similarity('gud','odin')
 
 import matplotlib.pyplot as plt
-import numpy as np
 plt.matshow(mdl['jesus'].reshape((10,10)), fignum = 100, cmap=plt.cm.gray)

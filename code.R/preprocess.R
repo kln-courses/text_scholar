@@ -10,7 +10,7 @@ source("code.R/util_fun.R")# input and parse file
 ### data extraction
 # make data directory
 dd <-paste(wd,'/data/somedata',sep="")
-dir.create(dd)
+#dir.create(dd)
 
 
 # download file
@@ -34,7 +34,6 @@ print(length(text.v))
 #collapse lines
 text.v <- paste(textlines.v, collapse = " ")
 length(text.v)
-head(text.v)
 ### preprocesing
 
 ## casefolding

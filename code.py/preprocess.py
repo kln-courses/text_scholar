@@ -40,7 +40,7 @@ from readvanilla import vanilla_folder
 docs, titles = vanilla_folder("/home/kln/Documents/education/text_scholar/data/txt/")
 test = docs[0:9]
 docsnorm = norm_unicode(docs)
-
+docsnorm[0]
 # tokenization
 token = docsnorm[0].split()
 print token
@@ -52,9 +52,11 @@ def tokenize_list(docs):
 docstoken = tokenize_list(docsnorm)
 print docstoken[0]
 
-## remove stopwords from external list
+## remove stopwords
 from nltk.corpus import stopwords
 sw = stopwords.words("danish")
+print sw
+len(token)
 token = [word for word in token if word not in sw] 
 len(token)
 
@@ -69,11 +71,29 @@ def stopfilter_list(docstoken, lang = "english"):
 
 docstoken = stopfilter_list(docstoken, 'danish')
 
+### prune m top and n bottom words
+from collections import defaultdict
+import numpy as np
+def prune_n(docs, mxn, mnn = 1):
+    frequency = defaultdict(int)
+    for doc in docs:
+        for token in doc:
+            frequency[token] += 1
+    freqs = sorted([val for val in frequency.values()], reverse = True)
+    mx = freqs[mxn - 1]
+    mn = freqs[- mnn]
+    output = [[token for token in doc if frequency[token] >= mn and frequency[token] <= mx] for doc in docs]
+    return output
+
+len(docstoken[0])
+docstoken = prune_n(docstoken, 10)
+len(test[0])
 
 # stemming
 from nltk.stem.snowball import SnowballStemmer
 stemmer = SnowballStemmer("danish", ignore_stopwords = True)
 token = [stemmer.stem(w) for w in token] 
+print token
 
 def stem_list(docstoken):
     docsstem = [[stemmer.stem(w) for w in token] for token in docstoken]
@@ -88,6 +108,7 @@ import numpy as np
 filepath = "/home/kln/Documents/education/text_scholar/data/adl_index.txt"
 metadata = pd.read_table(filepath, header = None, encoding = 'utf-8')
 metadata.head()
+titles[0:5]
 
 titles_df = pd.DataFrame(np.zeros(shape = (len(titles), 2)))
 for i in range(len(titles)):
@@ -95,7 +116,6 @@ for i in range(len(titles)):
 idx = metadata.iloc[:,0] == titles_df.iloc[0,0]
 target_df = metadata.loc[idx,:]
 idx = target_df.iloc[:,1] == titles_df.iloc[0,1]
-
 print target_df.loc[idx,:]
 print docsstem[0]
 
@@ -110,16 +130,6 @@ def get_metadata(metadata, titles, docnum):
 print get_metadata(metadata, titles, 0)
 print docsstem[0]
 
-### prune top percentile and bottom percentile
-from collections import defaultdict
-import numpy as np
-def prune(unigrams,mxper,mnper):
-    frequency = defaultdict(int)
-    for doc in unigrams:
-        for unigram in doc:
-            frequency[unigram] += 1
-    freqs = [val for val in frequency.values()]
-    mn = np.percentile(freqs, mnper)
-    mx = np.percentile(freqs, mxper)
-    unigrams_prune = [[unigram for unigram in doc if frequency[unigram] > mn and frequency[unigram] <= mx] for doc in unigrams]
-    return unigrams_prune
+
+
+
